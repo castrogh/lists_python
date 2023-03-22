@@ -10,3 +10,5 @@ while resposta == "S":
 
 for elemento in inventario:
     print(elemento)
+
+#Com uma lista podemos inserir múltiplos valores no mesmo identificador, neste caso utilizamos o exemplo de um inventário, e o nome do identidicador da lista foi inventario
