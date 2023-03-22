@@ -1,3 +1,5 @@
+#INSERÇÃO E BUSCA DE DADOS
+
 eqptos = []
 valores = []
 seriais = []
