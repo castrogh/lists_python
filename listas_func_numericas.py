@@ -2,6 +2,7 @@
 inventario=[]
 resposta = "S"
 
+#seção decadastro de equipamentos
 while resposta == "S":
     equipamento = [input("Equipamento: "),
         float(input("Valor: ")),
@@ -10,18 +11,21 @@ while resposta == "S":
     inventario.append(equipamento)
     resposta = input("Digite \"S\" para continuar: ").upper()
 
+#exibição dos equipamentos cadastrados anteiromente
 for elemento in inventario:
     print("Nome.........: ", elemento[0])
     print("Valor........: ", elemento[1])
     print("Serial.......: ", elemento[2])
     print("Departamento.: ", elemento[3])
 
+#seção de busca pelos equipamentos cadastrados
 busca = input("\nDigite o nome do equipamento que deseja buscar: ")
 for elemento in inventario:
     if busca==elemento[0]:
         print("Valor..: ", elemento[1])
         print("Serial.:", elemento[2])
 
+#seção de depreciação de equipamento
 depreciacao = input("\nDigite o nome do equipamento que será depreciado: ")
 for elemento in inventario:
     if depreciacao==elemento[0]:
@@ -29,13 +33,25 @@ for elemento in inventario:
         elemento[1] = elemento[1] * 0.9
         print("Novo valor: ", elemento[1])
 
+#seção de exclusão de equipamento
 serial = int(input("\nDigite o serial do equipamento que será excluído: "))
 for elemento in inventario:
     if elemento[2]==serial:
         inventario.remove(elemento)
 
+#exibição dos equipamentos restantes após a exclusão realizada anteriormente
 for elemento in inventario:
     print("Nome.........: ", elemento[0])
     print("Valor........: ", elemento[1])
     print("Serial.......: ", elemento[2])
     print("Departamento.: ", elemento[3])
+
+#exibição da lista de preços dos equipamentos, mostrando o mais caro, o mais barato e a soma do valor de todos equipementos
+valores=[]
+for elemento in inventario:
+    valores.append(elemento[1])
+
+if len(valores)>0:
+    print("O equipamento mais caro custa: ", max(valores))
+    print("O equipamento mais barato custa: ", min(valores))
+    print("O total de equipamentos é de: ", sum(valores))
