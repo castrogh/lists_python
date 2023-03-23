@@ -52,3 +52,6 @@ def resumirValores(lista):
         print("O equipamento mais caro custa: ", max(valores))
         print("O equipamento mais barato custa: ", min(valores))
         print("O total de equipamentos é de: ", sum(valores))
+
+#O parâmetro "lista", que é passado nas funções, é de uso interno e exclusivo da própria função, é nele que estão armazenados os dados inputados,
+#que posteriomente serão utilizados quando uma ou mais funções forem chamadas no módulo principal
