@@ -1,5 +1,6 @@
 #função para cadastro de equipamentos
 def preencherInventario(lista):
+    resposta = "S"
     while resposta == "S":
         equipamento = [input("Equipamento: "),
             float(input("Valor: ")),
